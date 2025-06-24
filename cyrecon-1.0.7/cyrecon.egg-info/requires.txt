@@ -1,0 +1,8 @@
+requests
+tqdm
+selenium
+fpdf
+colorama
+onnxruntime
+tldextract
+numpy

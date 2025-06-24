@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: cyrecon
-Version: 1.0.7
+Version: 1.0.8
 Requires-Dist: requests
 Requires-Dist: tqdm
 Requires-Dist: selenium

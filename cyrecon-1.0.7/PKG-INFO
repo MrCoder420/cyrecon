@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: cyrecon
+Version: 1.0.7
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: selenium
+Requires-Dist: fpdf
+Requires-Dist: colorama
+Requires-Dist: onnxruntime
+Requires-Dist: tldextract
+Requires-Dist: numpy
+Dynamic: requires-dist
