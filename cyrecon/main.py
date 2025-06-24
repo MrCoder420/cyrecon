@@ -1,7 +1,12 @@
-from cyrecon import subdomains, portscanner, dirscanner, vulnmatcher
+from cyrecon import subdomains
+from cyrecon import portscanner
+from cyrecon import dirscanner
+from cyrecon import vulnmatcher
+from cyrecon import reportgen
+from cyrecon import screenshooter
+
 import os
 
-# At the top
 all_results = {}
 last_vulns = []
 
@@ -18,7 +23,7 @@ def banner():
     """)
 
 def main_menu():
-    global all_results, last_vulns  # allow updates
+    global all_results, last_vulns
 
     while True:
         os.system("cls" if os.name == "nt" else "clear")
@@ -37,7 +42,7 @@ def main_menu():
         if choice == "1":
             domain = input("\nEnter target domain (e.g., example.com): ").strip()
             results = subdomains.scan_subdomains(domain)
-            all_results["subdomains"] = results  # ✅ Save results
+            all_results["subdomains"] = results
             if results:
                 print("\n✅ Scan Complete. Found Subdomains:")
                 for res in results:
@@ -49,7 +54,7 @@ def main_menu():
         elif choice == "2":
             ip = input("\nEnter target IP (e.g., 192.168.1.1): ").strip()
             results = portscanner.scan_ports(ip)
-            all_results["ports"] = results  # ✅ Save results
+            all_results["ports"] = results
             if not results:
                 print("\n[!] No open ports found.")
             input("\nPress Enter to return to menu...")
@@ -57,7 +62,7 @@ def main_menu():
         elif choice == "3":
             target = input("\nEnter target domain or IP (e.g., example.com): ").strip()
             results = dirscanner.scan_directories(target)
-            all_results["dirs"] = results  # ✅ Save results
+            all_results["dirs"] = results
             if results:
                 print("\n✅ Discovered Directories:")
                 for res in results:
@@ -97,7 +102,6 @@ def main_menu():
             if not all_results:
                 print("[!] Please run a scan first (Options 1–4).")
             else:
-                from cyrecon import reportgen
                 reportgen.save_json_report(all_results)
                 reportgen.save_pdf_report(all_results, last_vulns)
             input("\nPress Enter to return to menu...")
@@ -106,7 +110,6 @@ def main_menu():
             if not all_results.get("subdomains"):
                 print("[!] No subdomain scan results found. Run Option 1 first.")
             else:
-                from cyrecon import screenshooter
                 screenshooter.take_screenshots(all_results["subdomains"])
             input("\nPress Enter to return to menu...")
 

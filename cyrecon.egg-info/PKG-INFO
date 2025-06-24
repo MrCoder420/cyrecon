@@ -1,36 +1,12 @@
 Metadata-Version: 2.4
 Name: cyrecon
-Version: 1.0.4
-Summary: Automated AI-powered recon toolkit for subdomains, ports, directories and CVE detection
-Home-page: https://github.com/mrcoder420/cyrecon
-Author: Nikhil Bhor
-Author-email: nikhilbhor201@gmail.com
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: OS Independent
-Requires-Python: >=3.7
-Description-Content-Type: text/markdown
+Version: 1.0.6
 Requires-Dist: requests
 Requires-Dist: tqdm
 Requires-Dist: selenium
 Requires-Dist: fpdf
 Requires-Dist: colorama
-Dynamic: author
-Dynamic: author-email
-Dynamic: classifier
-Dynamic: description
-Dynamic: description-content-type
-Dynamic: home-page
+Requires-Dist: onnxruntime
+Requires-Dist: tldextract
+Requires-Dist: numpy
 Dynamic: requires-dist
-Dynamic: requires-python
-Dynamic: summary
-
-# CyRecon
-
-CyRecon is an automated recon toolkit with AI features for:
-
-- Subdomain scanning 🕵️‍♂️
-- Port scanning with AI risk analysis 🚨
-- Directory brute-forcing 📂
-- CVE suggestion matching 🧠
-- PDF/JSON reporting 📄

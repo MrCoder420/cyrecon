@@ -2,7 +2,10 @@ import requests
 import socket
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
-from cyrecon.ai_classifier import predict_phishing
+from cyrecon.ai_classifier import predict_phishing  # ✅ CORRECT
+# Importing the AI classifier for phishing detection
+
+
 import os
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)

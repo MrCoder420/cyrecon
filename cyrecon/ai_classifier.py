@@ -1,10 +1,11 @@
+import os
 import onnxruntime
 import numpy as np
 import tldextract
-import os
 
-# Load ONNX model from file
-MODEL_PATH = os.path.join("models", "model.onnx")
+# Get absolute path to model in installed package
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "models", "model.onnx")
+
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(
         f"ONNX model not found at {MODEL_PATH}.\n"
@@ -18,7 +19,7 @@ def extract_features(url: str):
     ext = tldextract.extract(url)
     return [
         len(url),
-        url.count("."),
+        url.count("."), 
         int(url.startswith("https")),
         int("login" in url.lower()),
         int("verify" in url.lower()),
