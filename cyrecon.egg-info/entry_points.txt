@@ -1,2 +1,2 @@
 [console_scripts]
-cyrecon = main:main_menu
+cyrecon = cyrecon.main:main_menu

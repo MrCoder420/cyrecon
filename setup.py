@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="cyrecon",
-    version="1.0.3",
+    version="1.0.4",
     author="Nikhil Bhor",
     author_email="nikhilbhor201@gmail.com",
     description="Automated AI-powered recon toolkit for subdomains, ports, directories and CVE detection",
@@ -25,8 +25,10 @@ setup(
     ],
     python_requires='>=3.7',
     entry_points={
-        'console_scripts': [
-            'cyrecon=main:main_menu',  # <-- THIS enables the CLI command "cyrecon"
-        ],
-    },
+     'console_scripts': [
+        'cyrecon=cyrecon.main:main_menu',  # ← ✅ Correct
+    ],
+},
+
+
 )

@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: cyrecon
-Version: 1.0.3
+Version: 1.0.4
 Summary: Automated AI-powered recon toolkit for subdomains, ports, directories and CVE detection
 Home-page: https://github.com/mrcoder420/cyrecon
 Author: Nikhil Bhor
