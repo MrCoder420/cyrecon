@@ -26,7 +26,7 @@ setup(
     python_requires='>=3.7',
     entry_points={
         'console_scripts': [
-            'cyrecon=cyrecon.main:main_menu',  # <-- THIS enables the CLI command "cyrecon"
+            'cyrecon=main:main_menu',  # <-- THIS enables the CLI command "cyrecon"
         ],
     },
 )
