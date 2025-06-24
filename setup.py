@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="cyrecon",
-    version="1.0.1",
+    version="1.0.2",
     author="Nikhil Bhor",
     author_email="nikhilbhor201@gmail.com",
     description="Automated AI-powered recon toolkit for subdomains, ports, directories and CVE detection",
