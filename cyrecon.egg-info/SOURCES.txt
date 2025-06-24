@@ -1,0 +1,8 @@
+README.md
+setup.py
+cyrecon.egg-info/PKG-INFO
+cyrecon.egg-info/SOURCES.txt
+cyrecon.egg-info/dependency_links.txt
+cyrecon.egg-info/entry_points.txt
+cyrecon.egg-info/requires.txt
+cyrecon.egg-info/top_level.txt

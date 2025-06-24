@@ -1,0 +1,15 @@
+admin
+login
+dashboard
+config
+phpinfo
+backup
+old
+test
+dev
+debug
+staging
+private
+upload
+files
+data
